@@ -1,2 +1,5 @@
 # eda-economy
-aggregate economy data
+
+Aggregate macro economic data
+
+Implementation is minimal and as less abstract as possible
