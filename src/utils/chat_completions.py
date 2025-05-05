@@ -6,6 +6,8 @@ from typing import Type, TypeVar, Dict, Any
 from pydantic import BaseModel
 from models.test import News
 
+from fastapi.encoders import jsonable_encoder
+
 __all__ = [
     "get_web_search_response",
 ]
@@ -51,4 +53,10 @@ def get_web_search_response(
 
     result = response.output_parsed
     result = json.loads(result.model_dump_json())
+
+    # Manually get the annotations from the response
+    # annotations = response.output[1].content[0].annotations
+    # annotations = jsonable_encoder(annotations)
+    # result["annotations"] = annotations
+
     return result
