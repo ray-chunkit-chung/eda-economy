@@ -20,7 +20,7 @@ def main() -> None:
     # Save test news data to JSON file
     response: Dict[str, Any] = get_web_search_response(
         api_key=OPENAI_API_KEY,
-        model=WEB_SEARCH_MODEL,
+        llm_model=WEB_SEARCH_MODEL,
         input_text="What was a positive news story from today?",
         response_model=News,
     )
