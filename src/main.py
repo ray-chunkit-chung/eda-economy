@@ -47,8 +47,7 @@ def get_bond_info(country: str, year: int) -> Dict[str, Any]:
         question = f"""
             Please explain the following information about {bond_name} of {country} issued in {year}:
             - descriptions (str): A description of the bond.
-            - issuance_volume (float): The total amount issued for the bond.
-            - currency (str): The currency in which the bond is issued.
+            - issuance_volume (str): The total amount issued for the bond, in what currency unit.
             - bond_yields (list[dict]): A dictionary mapping maturity dates to bond yields.
             - major_investors (list[str]): A list of major investors in the bond.
             - url (list[str]): List of URLs where the bond information can be found.

@@ -28,8 +28,7 @@ class GovBonds(BaseModel):
 
     Attributes:
         descriptions (str): A description of the bond.
-        issuance_volume (float): The total amount issued for the bond.
-        currency (str): The currency in which the bond is issued.
+        issuance_volume (str): The total amount issued for the bond, in what currency unit.
         bond_yields (list[dict]): A dictionary mapping maturity dates to bond yields.
         major_investors (list[str]): A list of major investors in the bond.
         url (list[str]): List of URLs where the bond information can be found.
@@ -37,10 +36,9 @@ class GovBonds(BaseModel):
 
     # bond_name: str = Field(..., description="The identifier or name of the bond.")
     descriptions: str = Field(..., description="A description of the bond.")
-    issuance_volume: float = Field(
-        ..., description="The total amount issued for the bond."
+    issuance_volume: str = Field(
+        ..., description="The total amount issued for the bond, in what currency unit."
     )
-    currency: str = Field(..., description="The currency in which the bond is issued.")
     bond_yields: list[BondYield] = Field(
         ...,
         description="A dictionary mapping maturity dates to bond yields.",
