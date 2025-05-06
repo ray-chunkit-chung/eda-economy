@@ -103,7 +103,9 @@ def ex0003_search_topic_by_chatgpt() -> None:
             response_model=Websites,
         )
         _ = save_json_local(
-            response, Path(DATA_DIR) / "index/url", topic.lower().replace(" ", "_")
+            response,
+            Path(DATA_DIR) / "yellow-page/url",
+            topic.lower().replace(" ", "_"),
         )
 
 

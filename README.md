@@ -15,12 +15,14 @@ export DATA_DIR="local"
 ```
 
 ```bash
+# MCP server contains the LLM scripts and the data models
 python mcp/main.py
 ```
 
 Output file folder:
 
 - **Debt**  ./local/debt/japan/2024/bonds_yyyymmdd_hhmmss.json
+- **Yellow Pages**  ./local/debt/japan/2024/bonds_yyyymmdd_hhmmss.json
 
 ## Core parts
 
