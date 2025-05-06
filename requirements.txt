@@ -1,0 +1,22 @@
+pandas
+# openpyxl
+# scipy
+scikit-learn
+ipykernel
+ipywidgets
+python-dotenv
+# ydata-profiling
+# markupsafe==2.0.1
+# autogluon
+# scikit-plots
+# nbformat
+# shap
+openai
+# unstructured[pdf]
+llama-index
+langchain-openai
+ragas
+# langgraph
+fastapi
+uvicorn
+streamlit
