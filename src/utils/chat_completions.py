@@ -45,7 +45,7 @@ def get_web_search_response(
 
     response = client.responses.parse(
         model=llm_model,
-        temperature=0,
+        # temperature=0,
         tools=[{"type": "web_search_preview"}],
         text_format=response_model,
         input=input_text,
