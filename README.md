@@ -22,6 +22,20 @@ Output file folder:
 
 - **Debt**  ./local/debt/japan/2024/bonds_yyyymmdd_hhmmss.json
 
+## Core parts
+
+### Data Models
+
+Pydantic models are used to define the structure of the data. The models are defined in the `src/models` directory. Each model corresponds to a specific type of data, such as debt. The models determine the json output structure of LLM response.
+
+```markdown
+src/models/
+├── __init__.py
+├── debt.py
+├── entity.py
+└── news.py
+```
+
 ## Development Roadmap
 
 - [x] Add more data types (government bonds)
