@@ -15,7 +15,7 @@ export DATA_DIR="local"
 ```
 
 ```bash
-python src/main.py
+python mcp/main.py
 ```
 
 Output file folder:
@@ -29,7 +29,7 @@ Output file folder:
 Pydantic models are used to define the structure of the data. The models are defined in the `src/models` directory. Each model corresponds to a specific type of data, such as debt. The models determine the json output structure of LLM response.
 
 ```markdown
-src/models/
+mcp/models/
 ├── __init__.py
 ├── debt.py
 ├── entity.py
