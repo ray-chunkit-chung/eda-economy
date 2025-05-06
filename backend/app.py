@@ -47,10 +47,10 @@ def get_dummy3(args: GetWeatherArgs) -> Dict[str, Any]:
 
 
 tool_registry = {
-    "get_weather": {"function": get_weather, "model": GetWeatherArgs},
-    "get_dummy1": {"function": get_dummy1, "model": GetWeatherArgs},
-    "get_dummy2": {"function": get_dummy2, "model": GetWeatherArgs},
-    "get_dummy3": {"function": get_dummy3, "model": GetWeatherArgs},
+    "get_weather": {"function": get_weather, "arg_model": GetWeatherArgs},
+    "get_dummy1": {"function": get_dummy1, "arg_model": GetWeatherArgs},
+    "get_dummy2": {"function": get_dummy2, "arg_model": GetWeatherArgs},
+    "get_dummy3": {"function": get_dummy3, "arg_model": GetWeatherArgs},
 }
 # End of Placeholder for the actual tool registry.
 ########################################################################
@@ -77,16 +77,14 @@ async def handle_tool_call(request: ToolRequest):
     tool_name = request.tool_call.name
     args = request.tool_call.arguments
 
-    if tool_name not in tool_registry:
+    tool = tool_registry.get(tool_name, None)
+    if tool is None:
         return {"error": f"Tool '{tool_name}' not found."}
 
-    # Tool to call
-    tool_func = tool_registry[tool_name]["function"]
-    # Pydantic model of argument of the tool
-    tool_model = tool_registry[tool_name]["model"]
-
     try:
-        result = tool_func(tool_model(**args))
+        tool_func = tool["function"]
+        arg_model = tool["arg_model"]
+        result = tool_func(arg_model(**args))
     except Exception as e:
         return {"error": f"Error while executing tool '{tool_name}': {str(e)}"}
         # raise RuntimeError(f"Error while executing tool '{tool_name}': {str(e)}")
