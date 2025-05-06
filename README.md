@@ -39,7 +39,7 @@ src/models/
 ## Development Roadmap
 
 - [x] Add more data types (government bonds)
-- [ ] Add more data types (government bond spreads)
+- [ ] Add more data types (government bond spreads - yield curve)
 - [ ] Add more data types (nominal gdp)
 - [ ] Add more data types (inflation)
 - [ ] Add more data types (central bank interest rates)
