@@ -19,12 +19,12 @@ export DATA_DIR="local"
 python mcp/main.py
 ```
 
-Output file folder:
+## Core parts
+
+### Output file folder
 
 - **Debt**  ./local/debt/japan/2024/bonds_yyyymmdd_hhmmss.json
-- **Yellow Pages**  ./local/debt/japan/2024/bonds_yyyymmdd_hhmmss.json
-
-## Core parts
+- **Yellow Pages of Entities**  ./local/yellow-page/url/china_bond_20250506_173847.json
 
 ### Data Models
 
@@ -39,6 +39,20 @@ mcp/models/
 ```
 
 ## Development Roadmap
+
+### Frontend
+
+- [ ] Add next.js app to display the data models and talk to backend API
+
+### Backend
+
+- [ ] Add fastapi server to serve the LLM and data models
+
+### Cloud
+
+- [ ] Add cloud storage that LLM can access. LLM response is stored in the cloud storage.
+
+### Data
 
 - [x] Add more data types (government bonds)
 - [ ] Add more data types (government bond spreads - yield curve)
