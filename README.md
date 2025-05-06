@@ -2,7 +2,7 @@
 
 Aggregate macro economic data. Implementation is minimal and as less abstract as possible.
 
-This script is designed to aggregate macroeconomic data from various sources, including debts, TODO: gdp, inflation, and interest rates. It uses the OpenAI API to process and summarize the data. A few dollars of llm costs to run this script.
+This script is designed to aggregate macroeconomic data from various sources, including debts, gdp, inflation, and interest rates. It uses the OpenAI API to process and summarize the data. A few dollars of llm costs to run this script.
 
 ## How to run this script
 
@@ -78,6 +78,9 @@ Output file folder:
 - [ ] Add more data types (corn prices)
 - [ ] Add more data types (wheat prices)
 - [ ] Add more data types (soybean prices)
+- [ ] Add more data types (bread prices)
+- [ ] Add more data types (rice prices)
+- [ ] Add more data types (potato prices)
 - [ ] Add more data types (coffee prices)
 - [ ] Add more data types (sugar prices)
 - [ ] Add more data types (cotton prices)
@@ -89,10 +92,7 @@ Output file folder:
 - [ ] Add more data types (fish prices)
 - [ ] Add more data types (egg prices)
 - [ ] Add more data types (milk prices)
-- [ ] Add more data types (bread prices)
-- [ ] Add more data types (rice prices)
-- [ ] Add more data types (potato prices)
-
+- [ ] Add more data types (Big Mac index)
 
 ## OpenAI models options
 
